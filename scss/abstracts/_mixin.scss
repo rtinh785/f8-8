@@ -2,10 +2,13 @@
 $grid-breakpoints: (
     xs: 0,
     sm: 576px,
+    // mobile 
     md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px,
+    // tablet
+    lg: 992px, 
+    // desktop
+    xl: 1200px, 
+    xxl: 1400px, 
 );
 
 @mixin breakpoints ($key) {
