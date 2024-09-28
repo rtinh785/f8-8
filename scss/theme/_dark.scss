@@ -1,15 +1,21 @@
 html.dark {
-    // Text-color
-   --text-color: #FFF;
+   // Text-color
+   --text-color: #fff;
 
    // Icon-color
-   --icon-color:  brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4933%) hue-rotate(326deg) brightness(108%) contrast(108%);
+   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+      saturate(4933%) hue-rotate(326deg) brightness(108%) contrast(108%);
 
+   // body
+   --body-color: #292e39;
 
    // Header
-   --header-bg-color: #171C28;
+   --header-bg-color: #171c28;
    // top-act
-   --top-act-group-bg-color: #292E39;
-   --top-act-group-shadow: rgba(0, 0, 0, 0.20);
-   --top-act-separate: #EDEDF6;
- }
+   --top-act-group-bg-color: #292e39;
+   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+   --top-act-separate: #ededf6;
+   //  drop-down
+   --drop-down-bg-color: #292e39;
+   --drop-down-shadow: rgba(23, 28, 40, 0.4);
+}
