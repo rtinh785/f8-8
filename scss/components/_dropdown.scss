@@ -1,4 +1,5 @@
 .dropdown {
+   display: none;
    position: absolute;
    left: 0;
    padding-top: 54px;
@@ -13,8 +14,11 @@
         content: url(../icons/drop-down-icon.svg);
         position: absolute;
         top: -13px;
-        left: var(--arrow-left-pos);
+        left: var(--arrow-left-pos);   
         transform: -50%;
+        filter: var(--drop-down-arrow-color);
       }
    }
 }
+
+

@@ -88,3 +88,4 @@ window.addEventListener("resize", calArrowPos);
 
 // Tính toán lại vị trí arrow sau khi tải template
 window.addEventListener("template-loaded", calArrowPos);
+
