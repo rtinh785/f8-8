@@ -13,6 +13,7 @@ html {
 
    // Header
    --header-bg-color: #eeeeee;
+   --header-shadow:rgba(237, 237, 246, 0.20) ;
    // mobile
    @include abstracts.breakpoints(lg) {
       --header-bg-color: #fff;
@@ -25,7 +26,8 @@ html {
    // drop-down 
    --drop-down-bg-color: #fff;
    --drop-down-shadow: rgba(200, 200, 200, 0.40);
-
+   --drop-down-menu-separate: #D2D1D6;
+   --drop-down-menu-column-small-icon-color: brightness(0) saturate(100%) invert(8%) sepia(9%) saturate(5959%) hue-rotate(217deg) brightness(90%) contrast(95%);
 
 
    

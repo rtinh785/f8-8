@@ -1,24 +1,93 @@
 .dropdown {
-   display: none;
+   display: block;
    position: absolute;
    left: 0;
    padding-top: 54px;
+   width: min(1240px, 100%);
 
    &__inner {
       position: relative;
       padding: 30px 62px 30px 30px;
       border-radius: 20px;
-      background:  var(--drop-down-bg-color);
+      height: min(582px, 100vh - 158px);
+      background: var(--drop-down-bg-color);
       box-shadow: 0px 40px 90px 20px var(--drop-down-shadow);
       &::before {
-        content: url(../icons/drop-down-icon.svg);
-        position: absolute;
-        top: -13px;
-        left: var(--arrow-left-pos);   
-        transform: -50%;
-        filter: var(--drop-down-arrow-color);
+         content: url(../icons/drop-down-icon.svg);
+         position: absolute;
+         top: -13px;
+         left: var(--arrow-left-pos);
+         filter: var(--drop-down-arrow-color);
+      }
+   }
+
+   .top-menu {
+      height: 100%;
+      
+
+      &__main {
+         width: 292px;
+         height: 100%;
+         border-right: 1px solid var(--drop-down-menu-separate);
+         overflow-y: auto;
+      }
+   }
+
+   // Common
+   .menu-column {
+      display: flex;
+      column-gap: 14px;
+
+      &__icon {
+         position: relative;
+         flex-shrink: 0;
+         width: 36px;
+         height: 36px;
+
+         &-1-1 {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+         }
+
+         &-1-2 {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            translate: -20% -20%;
+            filter: var(--drop-down-menu-column-small-icon-color);
+         }
+      }
+
+      &__content {
+         flex: 1;
+      }
+
+      &__heading {
+         margin-top: 3.5px;
+         font-size: 1.6rem;
+         font-weight: 500;
+         line-height: 150%;
+      }
+
+      &__list {
+         margin-top: 19px;
+      }
+
+      &__link {
+         display: block;
+         padding: 7px 0;
+         font-size: 1.4rem;
+         font-weight: 400;
+         line-height: 142.857%;
+         &:hover {
+            color: #0071dc;
+            font-weight: 500;
+         }
       }
    }
 }
-
-
