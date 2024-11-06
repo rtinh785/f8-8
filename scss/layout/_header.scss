@@ -23,12 +23,6 @@
    }
    position: relative;
 
-   &__more {
-      display: none;
-      @include abstracts.breakpoints(lg) {
-         display: block;
-      }
-   }
 
    // &__menu {
    //    display: block;
