@@ -1,7 +1,7 @@
-@use '../abstracts';
+@use "../abstracts";
 
 .dropdown {
-   display: block;
+   display: none;
    position: absolute;
    left: 0;
    padding-top: 54px;
@@ -26,7 +26,9 @@
    .top-menu {
       position: relative;
       height: 100%;
-   
+
+      overflow-y: auto;
+
       &__main {
          --main-column-width: 292px;
          width: var(--main-column-width);
@@ -37,8 +39,6 @@
          @include abstracts.breakpoints(xl) {
             --main-column-width: 258px;
          }
-
-
       }
    }
 
@@ -85,9 +85,21 @@
 
       &__list {
          margin-top: 19px;
+      }
 
-         & li:last-child a {
+      &__item {
+         &:last-child a {
             padding-bottom: 0px;
+         }
+
+         &--active .sub-menu,
+         &--active:hover .sub-menu {
+            display: grid;
+         }
+
+         &--active > .menu-column__link {
+            color: #0071dc;
+            font-weight: 500;
          }
       }
 
@@ -97,40 +109,37 @@
          font-size: 1.4rem;
          font-weight: 400;
          line-height: 135.857%;
+
          &:hover {
             color: #0071dc;
             font-weight: 500;
-
-            + .sub-menu {
-               display: grid;
-            }
          }
-      }
-
-      
-
-      .sub-menu {
-         position: absolute;
-         inset: 0 0 0 var(--main-column-width );
-         padding-left: 30px;
-         // display: flex;
-         // justify-content: space-between;
-         display: none;
-         grid-template-columns: repeat(3,1fr);
-         
-         overflow-y: auto;
-         
-         
-         
-         &__column {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-
-         }
-
       }
    }
 
-   
+   .sub-menu {
+      position: absolute;
+      inset: 0 0 0 var(--main-column-width);
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+
+      overflow-y: auto;
+
+      &__column {
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+      }
+
+      &--not-main {
+         position: inherit;
+         inset: initial;
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+      }
+   }
+
+   .menu-column__item--active .sub-menu {
+      display: grid;
+   }
 }

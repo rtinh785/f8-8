@@ -89,3 +89,75 @@ window.addEventListener("resize", calArrowPos);
 // Tính toán lại vị trí arrow sau khi tải template
 window.addEventListener("template-loaded", calArrowPos);
 
+/**
+ * Giữ active menu khi hover
+ *
+ * Cách dùng:
+ * 1. Thêm class "js-menu-list" vào thẻ ul menu chính
+ * 2. Thêm class "js-dropdown" vào class "dropdown" hiện tại
+ *  nếu muốn reset lại item active khi ẩn menu
+ */
+window.addEventListener("template-loaded", handleActiveMenu);
+
+function handleActiveMenu() {
+    const dropdowns = $$(".js-dropdown");
+    const menus = $$(".js-menu-list");
+    const activeClass = "menu-column__item--active";
+
+    const removeActive = (menu) => {
+        menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
+    };
+
+    const init = () => {
+        menus.forEach((menu) => {
+            const items = menu.children;
+            if (!items.length) return;
+
+            removeActive(menu);
+            items[0].classList.add(activeClass);
+
+            Array.from(items).forEach((item) => {
+                item.onmouseenter = () => {
+                    if (window.innerWidth <= 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                };
+            });
+        });
+    };
+
+    init();
+
+    dropdowns.forEach((dropdown) => {
+        dropdown.onmouseleave = () => init();
+    });
+}
+
+/**
+ * JS toggle
+ *
+ * Cách dùng:
+ * <button class="js-toggle" toggle-target="#box">Click</button>
+ * <div id="box">Content show/hide</div>
+ */
+window.addEventListener("template-loaded", initJsToggle);
+
+function initJsToggle() {
+    $$(".js-toggle").forEach((button) => {
+        const target = button.getAttribute("toggle-target");
+        if (!target) {
+            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+        }
+        button.onclick = () => {
+            if (!$(target)) {
+                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
+            }
+            const isHidden = $(target).classList.contains("hide");
+
+            requestAnimationFrame(() => {
+                $(target).classList.toggle("hide", !isHidden);
+                $(target).classList.toggle("show", isHidden);
+            });
+        };
+    });
+}
