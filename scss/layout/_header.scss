@@ -59,8 +59,10 @@
    }
 
    &.show {
-      transform: translate(0);
-
+      transform: translate(1);
+      @include abstracts.breakpoints(lg) {
+         transform: translate(0);
+      }
       &+ .navbar__overlay{
          visibility: visible;
          opacity: 1;
@@ -98,6 +100,8 @@
       @include abstracts.breakpoints(lg) {
          flex-direction: column;
          align-items: flex-start;
+         overflow: auto;
+         height: 100%;
       }
    }
 
@@ -107,6 +111,7 @@
       }
       @include abstracts.breakpoints(lg) {
          width: 100%;
+   
          &:hover .dropdown {
             display: none;
          }
