@@ -23,10 +23,8 @@
    }
    position: relative;
 
-
    // &__menu {
    //    display: block;
-
 
    //    @include abstracts.breakpoints(lg) {
    //       display: block;
@@ -36,13 +34,12 @@
    //       z-index: 1;
    //    }
 
-         
    // }
 }
 
 .navbar {
    margin-left: 129px;
-   
+
    @include abstracts.breakpoints(xl) {
       margin-left: 13px;
    }
@@ -51,11 +48,17 @@
       padding: 30px 0;
       position: fixed;
       inset: 0 50% 0 0;
-      background-color: white;
+      background-color: var(--side-bar-bg-color);
       margin-left: 0;
       z-index: 1;
       transform: translate(-100%);
       transition: transform 0.5s ease-in-out;
+      border-radius: 0px 20px 20px 0px;
+      box-shadow: 0px 40px 90px 20px var(--side-bar--shadow);
+   }
+
+   @include abstracts.breakpoints(sm) {
+      inset: 0 20% 0 0;
    }
 
    &.show {
@@ -63,35 +66,69 @@
       @include abstracts.breakpoints(lg) {
          transform: translate(0);
       }
-      &+ .navbar__overlay{
+      & + .navbar__overlay {
          visibility: visible;
          opacity: 1;
       }
    }
 
-   &__close-btn{
+   &__close-btn {
       display: none;
       @include abstracts.breakpoints(lg) {
-         display: block;     
-         padding:0 0 15px 40px;
+         display: block;
+         padding: 0 0 15px 40px;
       }
 
-     
+      @include abstracts.breakpoints(sm) {
+         padding: 0 0 15px 20px;
+      }
+
+      img {
+         filter: var(--side-bar-icon-color);
+      }
+   }
+
+   &-btn {
+      align-items: center;
+      padding: 10px 40px;
+
+      @include abstracts.breakpoints(sm) {
+         padding: 10px 40px 10px 20px;
+      }
+
+      &__title, &__qnt {
+         font-size: 1.5rem;
+         font-weight: 500;
+         line-height: 146.667%;
+         color: var(--text-color);
+      }
+
+      &__title {
+         margin-left: 16px;
+         
+      }
+
+      &__qnt {
+         margin-left: auto;
+      }
+
+      img {
+         filter: var(--side-bar-icon-color);
+      }
+
    }
 
    &__overlay {
       visibility: hidden;
       opacity: 0;
-      transition: visibility,  opacity;
+      transition: visibility, opacity;
       transition-duration: 0.5s;
-      
+
       @include abstracts.breakpoints(lg) {
          position: fixed;
          inset: 0;
          background-color: rgba($color: #000000, $alpha: 0.4);
       }
-
-
    }
 
    &__list {
@@ -101,6 +138,7 @@
          flex-direction: column;
          align-items: flex-start;
          overflow: auto;
+         overscroll-behavior: contain;
          height: 100%;
       }
    }
@@ -111,7 +149,7 @@
       }
       @include abstracts.breakpoints(lg) {
          width: 100%;
-   
+
          &:hover .dropdown {
             display: none;
          }
@@ -133,6 +171,12 @@
          line-height: 150%;
          justify-content: space-between;
       }
+
+      @include abstracts.breakpoints(sm) {
+         padding: 0 40px 0 20px;
+      }
+
+      
    }
 
    &__arrow {
