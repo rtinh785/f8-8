@@ -1,0 +1,46 @@
+@use "../abstracts";
+
+//  like-btn
+
+.like-btn {
+   width: 50px;
+   height: 50px;
+   @include abstracts.breakpoints(lg) {
+      width: 35px;
+      height: 35px;
+   }
+   @include abstracts.breakpoints(md) {
+      width: 50px;
+      height: 50px;
+   }
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 13px;
+   background-color: var(--like-btn-bg-color);
+   border-radius: 50%;
+   box-shadow: 0px 20px 60px var(--like-btn-shadow-color);
+
+   .heart-icon {
+      filter: var(--heart-icon-color);
+      &--red {
+         filter: initial;
+      }
+   }
+
+   &:not(&--liked) {
+      .heart-icon--red {
+         display: none;
+      }
+   }
+
+   &--liked {
+      .heart-icon {
+         display: none;
+      }
+      .heart-icon--red {
+         display: block;
+         margin-top: 6px;
+      }
+   }
+}

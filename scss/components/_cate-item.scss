@@ -1,0 +1,59 @@
+@use "../abstracts";
+
+.cate-item {
+   padding: 20px;
+   display: flex;
+   gap: 20px;
+   background-color: var(--header-bg-color);
+   border-radius: 16px;
+   height: 100%;
+   align-items: center;
+   @include abstracts.breakpoints(xl) {
+      flex-direction: column;
+   }
+
+   @include abstracts.breakpoints(md) {
+      flex-direction: row;
+   }
+
+   &__thumb {
+      border-radius: 8px;
+      background-color: var(--cate-item-bg-color);
+      width: 116px;
+      height: 116px;
+      object-fit: contain;
+      @include abstracts.breakpoints(xl) {
+         width: 100%;
+         height: 150px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      @include abstracts.breakpoints(md) {
+         width: 88px;
+         height: 88px;
+         margin: 0;
+      }
+   }
+
+   &__info {
+      padding: 15px 0;
+      @include abstracts.breakpoints(md) {
+         margin-left: 15px;
+      }
+   }
+
+   &__title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 145.455%;
+   }
+
+   &__desc {
+      margin-top: 6px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 150%;
+   }
+}

@@ -33,4 +33,22 @@ html {
    --side-bar--shadow: rgba(200, 200, 200, 0.40);
    --side-bar-icon-color: filter: brightness(0) saturate(100%) invert(8%) sepia(8%) saturate(6485%) hue-rotate(215deg) brightness(92%) contrast(95%);
    
+   // cate-item
+   --cate-item-bg-color:#FFF ;
+
+   // Button
+      // filter-btn
+   --filter-text-color:#6c6c72;
+   --filter-color:  brightness(0) saturate(100%) invert(7%) sepia(39%) saturate(1542%) hue-rotate(218deg) brightness(89%) contrast(95%);
+   --filter-bg-color: #FFF;
+       // like-btn
+   --like-btn-bg-color: #FFF;
+   --like-btn-shadow-color: rgba(124, 124, 124, 0.20);
+   --heart-icon-color:brightness(0) saturate(100%) invert(3%) sepia(88%) saturate(2608%) hue-rotate(244deg) brightness(90%) contrast(88%);
+
+   //product-card
+   --product-card-bg-color: #fff;
+   --product-card-shadow-color: rgba(237, 237, 246, 0.2);
+   --title-text-color:#1A162E;
+   --brand-text-color:#9E9DA8;
 }

@@ -1,0 +1,38 @@
+@use "../abstracts";
+
+.home {
+   &__container {
+      margin-top: 40px;
+      @include abstracts.breakpoints(md) {
+         margin-top: 30px;
+      }
+   }
+
+   &__heading {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 141.667%;
+      color: var(--text-color);
+   }
+
+   &-items {
+      --grid-gutter-x: 51px;
+      --grid-gutter-y: 20px;
+      margin-top: 20px;
+      @include abstracts.breakpoints(lg) {
+         --grid-gutter-x: 35px;
+      }
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__list-products{
+      margin-top: 20px;
+      --grid-gutter-x: 30px;
+      --grid-gutter-y: 30px;
+   }
+}
