@@ -34,19 +34,41 @@ html.dark {
    --cate-item-bg-color: #292e39;
 
    // Button
-      // filter-btn
-   --filter-text-color:#fff;
-   --filter-color:  brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7429%) hue-rotate(152deg) brightness(117%) contrast(114%);
-   --filter-bg-color: #171C28;
-      // like-btn
-   --like-btn-bg-color: #292E39;
-   --like-btn-shadow-color: rgba(124, 124, 124, 0.20);
-   --heart-icon-color:  brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(12%) hue-rotate(103deg) brightness(105%) contrast(105%);
-   
+   // filter-btn
+   --filter-text-color: #fff;
+   --filter-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7429%) hue-rotate(152deg)
+      brightness(117%) contrast(114%);
+   --filter-btn-bg-color: #171c28;
+   // like-btn
+   --like-btn-bg-color: #292e39;
+   --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
+   --heart-icon-color: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(12%) hue-rotate(103deg)
+      brightness(105%) contrast(105%);
+
    //product-card
-   --product-card-bg-color: #171C28;
-   --product-card-shadow-color: rgba(0, 0, 0, 0.20);
-   --title-text-color:#fff;
-   --brand-text-color:#9E9DA8;
-   // 
+   --product-card-bg-color: #171c28;
+   --product-card-shadow-color: rgba(0, 0, 0, 0.2);
+   --title-text-color: #fff;
+   --brand-text-color: #9e9da8;
+
+   // filter
+   --filter-bg-color: #292e39;
+   --filter-shadow-color: rgba(0, 0, 0, 0.4);
+   --filter-text-color: #fff;
+   --filter-bg-slider: #d2d1d6;
+   --filter-bg-circle-color: #292e39;
+   --border-input-color: #d2d1d6;
+   --filter-bg-tag-color: #171c28;
+   --filter-tag-color: #fff;
+   --filter-arrow-up: brightness(0) saturate(100%) invert(13%) sepia(9%) saturate(1533%) hue-rotate(183deg)
+      brightness(98%) contrast(87%);
+
+   // sign-up page
+   --sign-up-bg-color: #171c28;
+   --sp-intro-text-color: #1a162e;
+   --intro-text-color:#1A162E;
+   --intro-text-color:#B9BABE;
+   --content-bg-color:#292E39;
+   --btn-text-color:#B9BABE;
+   --btn-icon-color: brightness(0) saturate(100%) invert(61%) sepia(90%) saturate(9%) hue-rotate(191deg) brightness(100%) contrast(101%); 
 }

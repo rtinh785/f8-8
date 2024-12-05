@@ -40,7 +40,7 @@ html {
       // filter-btn
    --filter-text-color:#6c6c72;
    --filter-color:  brightness(0) saturate(100%) invert(7%) sepia(39%) saturate(1542%) hue-rotate(218deg) brightness(89%) contrast(95%);
-   --filter-bg-color: #FFF;
+   --filter-btn-bg-color: #FFF;
        // like-btn
    --like-btn-bg-color: #FFF;
    --like-btn-shadow-color: rgba(124, 124, 124, 0.20);
@@ -51,4 +51,34 @@ html {
    --product-card-shadow-color: rgba(237, 237, 246, 0.2);
    --title-text-color:#1A162E;
    --brand-text-color:#9E9DA8;
+
+   // filter 
+   --filter-bg-color:#fff;
+   --filter-shadow-color:rgba(200, 200, 200, 0.4);
+   --filter-text-color: #1A162E;
+   --filter-bg-slider :#D2D1D6;
+   --filter-bg-circle-color: #FFF;
+   --border-input-color:#D2D1D6;
+   --filter-bg-tag-color:#F8F8FB;
+   --filter-tag-color: black;
+   --filter-arrow-up: brightness(0) saturate(100%) invert(100%) sepia(88%) saturate(397%) hue-rotate(277deg) brightness(108%) contrast(105%);
+
+
+
+   // sign-up page
+   --sign-up-bg-color:#FAFAFD;
+   --sp-intro-text-color: #1a162e;
+   --intro-text-color:#1A162E;
+   --content-bg-color:#fff;
+   --btn-text-color:#1A162E;
+   --btn-icon-color: brightness(0) saturate(100%) invert(7%) sepia(11%) saturate(4122%) hue-rotate(213deg) brightness(99%) contrast(95%); 
+  
+
+
+
+
+
+
+
+
 }

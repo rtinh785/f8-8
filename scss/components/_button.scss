@@ -44,3 +44,55 @@
       }
    }
 }
+
+// btn
+
+.btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   padding: 0 20px;
+   background-color: #f8f8fb;
+   height: 46px;
+   font-size: 1.8rem;
+   font-weight: 500;
+   border-radius: 6px;
+   user-select: none;
+
+   & + .btn {
+      margin-left: 20px;
+   }
+
+   &--text {
+      height: 36px;
+      background: transparent;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #9e9da8;
+   }
+
+   &--primary {
+      background-color: #ffb700;
+      height: 38px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #1a162e;
+   }
+
+   &--outline {
+      height: 50px;
+      background-color: transparent;
+      border: 1px solid #d2d1d6;
+      font-size: 1.8rem;
+      font-weight: 500;
+   }
+
+   &--rounded {
+      border-radius: 99px ;
+   }
+
+   &:hover {
+      opacity: 0.9;
+   }
+}

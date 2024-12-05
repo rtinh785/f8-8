@@ -1,0 +1,214 @@
+@use "../abstracts";
+
+.filter-wrap {
+   position: relative;
+   z-index: 1;
+
+   .filter {
+      position: absolute;
+      top: 56px;
+      right: 0;
+      padding: 30px;
+      background-color: var(--filter-bg-color);
+      border-radius: 20px;
+      filter: drop-shadow(0px 40px 90px var(--filter-shadow-color));
+
+      &.hide {
+         opacity: 0;
+         visibility: hidden;
+      }
+
+      transition: opacity, visibility;
+      transition-duration: 0.2s;
+
+      &__heading {
+         font-size: 2.2rem;
+         font-weight: 500;
+         line-height: 145.455%;
+         color: var(--filter-text-color);
+      }
+
+      &__form {
+         margin-top: 30px;
+
+         &-label {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+
+            &--small {
+               font-size: 1.4rem;
+               font-weight: 500;
+               line-height: 142.857%;
+            }
+         }
+
+         &-slider {
+            position: relative;
+            margin: 31px 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--filter-bg-slider);
+
+            &::before,
+            &::after {
+               position: absolute;
+               left: 0;
+               top: 0;
+               transform: translateY(-46%);
+               content: " ";
+               display: block;
+               background-color: var(--filter-bg-circle-color);
+               width: 22px;
+               height: 22px;
+               border: 6px solid #ffb700;
+               border-radius: 50%;
+            }
+
+            &::before {
+               left: 18px;
+            }
+            &::after {
+               left: 160px;
+            }
+         }
+
+         &-group {
+            margin-top: 20px;
+
+            &--inline {
+               display: flex;
+               column-gap: 30px;
+            }
+
+            &-tags {
+               display: flex;
+               align-items: center;
+               column-gap: 20px;
+            }
+
+            &-tag {
+               cursor: pointer;
+               padding: 6px 12px;
+               border-radius: 6px;
+               font-size: 1.4rem;
+               font-weight: 500;
+               line-height: 142.857%;
+               color: #9e9da8;
+               background-color: var(--filter-bg-tag-color);
+               transition: color 0.2s ease-in-out;
+
+               &:hover {
+                  color: var(--filter-tag-color);
+               }
+            }
+
+            &-input {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 10px 16px;
+               border-radius: 6px;
+               border: 1px solid #d2d1d6;
+            }
+
+            &-search {
+               border: none;
+            }
+
+            &-icon {
+               width: 14px;
+               height: 14px;
+            }
+         }
+
+         &-input {
+            margin-top: 10px;
+            display: flex;
+            width: 121px;
+            padding: 8px 12px;
+            align-items: center;
+            border-radius: 6px;
+            border: 1px solid var(--border-input-color);
+         }
+
+         &-select-wrap {
+            margin: 20px 0;
+            display: flex;
+            padding: 5px 0;
+            align-items: center;
+            border-radius: 6px;
+            border: 1px solid #d2d1d6;
+         }
+
+         &-select-item {
+            padding: 5px 14px;
+            display: flex;
+            align-items: center;
+            column-gap: 65px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+            color: var(--text-color);
+
+            &:last-child {
+               column-gap: 17px;
+
+               @include abstracts.breakpoints(xl) {
+                  column-gap: 65px;
+               }
+            }
+         }
+
+         &-select-separate {
+            display: block;
+            width: 1px;
+            height: 35px;
+            margin-left: 14px;
+            background: #d2d1d6;
+         }
+      }
+
+      &__row {
+         display: flex;
+         @include abstracts.breakpoints(xl) {
+            height: 50vh;
+            overflow: auto;
+            flex-direction: column;
+         }
+      }
+
+      &__separate {
+         margin: 0 30px;
+         width: 1px;
+         height: 162px;
+         background-color: #eee;
+         @include abstracts.breakpoints(xl) {
+            width: 100%;
+            height: 1px;
+            margin: 30px 0;
+         }
+      }
+
+      &__footer {
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 32px;
+      }
+
+      &__submit {
+         font-size: 1.5rem;
+      }
+
+      &__arrow-up {
+         display: block;
+         top: 2.5px;
+         right: 19px;
+         transform: translateY(-100%);
+         position: absolute;
+         height: 19.5px;
+         background-color: transparent;
+         filter: var(--filter-arrow-up);
+      }
+   }
+}

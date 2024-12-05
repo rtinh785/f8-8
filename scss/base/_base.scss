@@ -24,14 +24,21 @@ a {
 img,
 button,
 input,
+label,
 textarea,
 select {
    font-family: inherit;
    color: inherit;
    -webkit-tap-highlight-color: transparent;
+   outline: none;
+}
+
+input {
+   background-color: transparent;
 }
 
 .icon {
+   cursor: pointer;
    filter: var(--icon-color);
 }
 

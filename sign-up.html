@@ -1,72 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Sign-up | Grocery Mart</title>
+      <title>Sign up | Grocery Mart</title>
 
       <!-- FAVICON -->
 
-      <link
-         rel="apple-touch-icon"
-         sizes="76x76"
-         href="./assets/favicon/apple-touch-icon.png"
-      />
-      <link
-         rel="icon"
-         type="image/png"
-         sizes="32x32"
-         href="./assets/favicon/favicon-32x32.png"
-      />
-      <link
-         rel="icon"
-         type="image/png"
-         sizes="16x16"
-         href="./assets/favicon/favicon-16x16.png"
-      />
+      <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
       <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-      <link
-         rel="mask-icon"
-         href="./assets/favicon/safari-pinned-tab.svg"
-         color="#5bbad5"
-      />
+      <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
 
       <!-- FONTS -->
 
-      <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+      <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
       <!-- CSS -->
 
-      <link rel="stylesheet" href="./assets/css/main.css">
+      <link rel="stylesheet" href="./assets/css/main.css" />
 
       <!-- SCRIPTS -->
 
-      <Script src="./assets/js/scripts.js"></Script>
-
+      <script src="./assets/js/scripts.js"></script>
    </head>
    <body>
-       
-      <!-- Header -->
+      <main class="auth-main">
+         <div class="auth">
+            <div class="auth__intro show" id="auth__intro">
+               <img src="./assets/icons/sign-up.svg" alt="auth-img" class="auth__intro-img" />
+               <p class="auth__intro-text">
+                  The best of luxury brand values, high quality products, and innovative services
+               </p>
 
-      <header id="header">
-         <script>
-            load("#header", "./templates/header.html");
-         </script>
-      </header>
+               <button class="auth__slider js-toggle" toggle-target="#auth__intro">
+                  <img src="./assets/icons/auth-slider.svg" alt="slider" class="slider d-none d-md-block" />
+               </button>
+            </div>
+            <div class="auth__content">
+               <div class="auth__content-inner">
+                  <!-- Logo -->
+                  <a href="./index.html" class="logo">
+                     <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                     <h1 class="logo__title">grocerymart</h1>
+                  </a>
+                  <h2 class="auth__title">Sign Up</h2>
+                  <p class="auth__desc">Let’s create your account and Shop like a pro and save money.</p>
+                  <!-- form -->
+                  <form action="./index-logined.html" class="form auth__form">
+                     <!-- Email -->
+                     <div class="form-group">
+                        <div class="form__text-input">
+                           <input type="email" class="form__input" placeholder="Email" required />
+                           <img src="./assets/icons/letter-icon.svg" alt="letter-icon" class="form__input-icon" />
+                           <img
+                              src="./assets/icons/input-error.svg"
+                              alt="letter-icon"
+                              class="form__input-icon form__input-icon--error"
+                           />
+                        </div>
+                        <p class="form__text-input-error">Email chưa đúng định dạng</p>
+                     </div>
+                     <!-- Password -->
+                     <div class="form-group">
+                        <div class="form__text-input">
+                           <input type="password" class="form__input" placeholder="Password" required minlength="6" />
+                           <img src="./assets/icons/lock-icon.svg" alt="letter-icon" class="form__input-icon" />
+                           <img
+                              src="./assets/icons/input-error.svg"
+                              alt="letter-icon"
+                              class="form__input-icon form__input-icon--error"
+                           />
+                        </div>
+                        <p class="form__text-input-error">Mật chưa đúng định dạng</p>
+                     </div>
+                     <!-- Password again -->
+                     <div class="form-group">
+                        <div class="form__text-input">
+                           <input
+                              type="password"
+                              class="form__input"
+                              placeholder="Confirm Password"
+                              required
+                              minlength="6"
+                           />
+                           <img src="./assets/icons/lock-icon.svg" alt="letter-icon" class="form__input-icon" />
+                           <img
+                              src="./assets/icons/input-error.svg"
+                              alt="letter-icon"
+                              class="form__input-icon form__input-icon--error"
+                           />
+                        </div>
+                        <p class="form__text-input-error">Mật chưa đúng định dạng</p>
+                     </div>
 
-      <!-- Main -->
+                     <div class="form-group form-group--inline">
+                        <label class="form__checkbox">
+                           <input type="checkbox" name="" id="" class="form__checkbox-input" />
+                           <span class="form__checkbox-label">Set as default card</span>
+                        </label>
+                        <a href="#!" class="auth__link">Recovery Password</a>
+                     </div>
 
-      <p>Sign-up</p>
-
-      <!-- Footer -->
-
-      <footer id="footer">
-         <script>
-            load("#footer", "./templates/footer.html");
-         </script>
-      </footer>
-
+                     <div class="form-group auth__btn-group">
+                        <button class="btn btn--primary auth__btn">Sign Up</button>
+                        <button class="btn btn--outline auth__btn auth__btn--diff">
+                           <img src="./assets/icons/google-icon.svg" alt="google-icon" class="google-icon" />
+                           Sign in with Gmail
+                        </button>
+                     </div>
+                  </form>
+                  <!-- text -->
+                  <p class="auth__text">
+                     You have an account yet?
+                     <a href="./sign-in.html" class="auth__link auth__link--big">Sign In</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script>
+         window.dispatchEvent(new Event("template-loaded"));
+      </script>
    </body>
 </html>

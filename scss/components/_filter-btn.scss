@@ -1,19 +1,19 @@
-.fillter-btn {
-    cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: var(--filter-bg-color);
-    color: var(--filter-text-color);
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 142.857%;
-    display: flex;
-    align-items: center;
-    column-gap: 14px;
+.filter-btn {
+   cursor: pointer;
+   padding: 6px 12px;
+   border-radius: 6px;
+   background: var(--filter-btn-bg-color);
+   color: var(--filter-text-color);
+   font-size: 1.4rem;
+   font-weight: 700;
+   line-height: 142.857%;
+   display: flex;
+   align-items: center;
+   column-gap: 14px;
 
-
-    &__icon {
-       filter: var(--filter-color);
-    }
- }
- 
+   &__icon {
+      width: 16px;
+      height: 14.4px;
+      filter: var(--filter-color);
+   }
+}

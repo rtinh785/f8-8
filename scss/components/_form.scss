@@ -1,0 +1,96 @@
+@use "../abstracts";
+.form {
+   &-group {
+      &:not(:first-child) {
+         margin-top: 30px;
+      }
+
+      &--inline {
+         margin-top: 20px !important;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      &:has(:invalid):has(.form__input:not(:placeholder-shown)) {
+         .form__input {
+            border-color: red;
+            background-color: rgba($color: red, $alpha: 0.1);
+         }
+
+         .form__input-icon--error,
+         .form__text-input-error {
+            display: block;
+         }
+
+         .form__input-icon:not(:last-child) {
+            display: none;
+         }
+      }
+   }
+
+   &__text-input {
+      position: relative;
+
+      &-error {
+         display: none;
+         margin-top: 10px;
+         font-size: 1.3rem;
+         font-weight: 400;
+         color: red;
+      }
+   }
+
+   &__input {
+      &:focus {
+         border-color: #77dae6;
+      }
+
+      &:focus + &-icon {
+         filter: brightness(0) saturate(100%) invert(83%) sepia(75%) saturate(935%) hue-rotate(159deg) brightness(96%)
+            contrast(88%);
+      }
+
+      &::placeholder {
+         color: #d2d1d6;
+         font-size: 1.8rem;
+         font-weight: 400;
+         line-height: 144.444%;
+      }
+
+      font-feature-settings: "liga" off, "clig" off;
+      padding: 12px 40px 12px 12px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+      color: #d2d1d6;
+      border: 1.5px solid #d2d1d6;
+
+      &-icon {
+         position: absolute;
+         top: 15px;
+         right: 12px;
+
+         & + & {
+            width: 20px;
+            display: none;
+         }
+      }
+   }
+
+   &__checkbox {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+      color: #9e9da8;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      @include abstracts.breakpoints(lg) {
+         column-gap: 0px;
+      }
+   }
+}
